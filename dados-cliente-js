@@ -1,0 +1,2 @@
+//Dados do cliente, quando logado
+console.log(browsingContext.Common.Customer);
