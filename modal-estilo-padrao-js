@@ -1,0 +1,10 @@
+//CRIAR MODAL PADRÃO
+app.modal({
+  html: '<p style="text-align: center">Senha alterada com sucesso!</p>',
+  className: 'modal-custom',
+  width: 300,
+  height: 200
+});
+ 
+//Fechar o modal:
+app.tools.closeModal();
