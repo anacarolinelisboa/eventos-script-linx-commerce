@@ -1,0 +1,11 @@
+//ATUALIZAR FUNÇÕES NA LISTAGEM APÓS FILTRADO
+
+//O onBuildFacetingComplete é disparado um pouco antes, no finaL da construção
+$("body").on('onBuildFacetingComplete', function(){ 
+  minhafuncao();
+});
+
+//enquanto o onFacetingComplete um pouco depois, assim que o filtro é aplicado
+$('body').on('onFacetingComplete', function(){ 
+  minhafuncao();
+}); 
