@@ -1,0 +1,8 @@
+$.publish('/checkout/basket/changed/'); // Disparar evento de atualização finalizada no carrinho
+
+$.publish('wd/checkout/basket/refresh'); // Dispara evento para iniciar atualização no carrinho
+
+// Chamar função quando houver mudança no carrinho
+$.subscribe('/checkout/basket/changed/', function() {
+    calculateProgressiveDiscountCart();
+});
