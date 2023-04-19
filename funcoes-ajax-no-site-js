@@ -1,0 +1,7 @@
+// Com este script, é possível monitorar qualquer evento ajax disparado na página, aí é só verificar no settings.url se é o evento que você quer monitorar
+$(document).ajaxSuccess(function(e,xhr,settings){
+  console.log(settings);
+  if (settings.url.indexOf('pesquisa.partial') != -1) {
+    console.log('Ajax carregado');
+  }
+}); 
