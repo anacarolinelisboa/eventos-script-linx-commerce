@@ -1,0 +1,63 @@
+$("body").on('change', function(){
+  console.log('Evento de update em qualquer local do site');
+});
+
+$.subscribe('/checkout/basket/changed', function() {
+  console.log('Quando houver mudança no carrinho');
+});
+
+$.subscribe('/browsingModal/openMain/', function() {
+  console.log('Evento ao abrir pop-ups');
+});
+
+$.subscribe('checkout/summary/payment', function(e, args) {
+  console.log('Retornar a forma de pagamento selecionada no checkout');
+});
+
+$("body").on('onBuildFacetingComplete', function(){
+  console.log('Evento de seleção das facetas na listagem');
+});
+
+$('body').on('onFacetingComplete', function(){
+  console.log('Evento de seleção das facetas na listagem');
+});
+
+ko.postbox.subscribe('checkout/data/update', function(){
+  console.log('Quando houver mudança no checkout');
+});
+
+ko.postbox.subscribe('checkout/signup/done', function(){
+  console.log('Quando Cadastro for finalizado no checkout');
+});
+
+ko.postbox.subscribe('checkout/signin/done', function(){
+  console.log('Quando o usuário fazer login no checkout');
+});
+
+ko.postbox.subscribe('checkout/payment/submit', function() {
+  console.log('Dispara no momento que o pedido é concluído no checkout');
+});
+
+$.subscribe('wd/MarketingNewsletter/Submit/Complete', function(e, args) {
+  console.log('Evento de cadastro na newsltetter');
+});
+
+$.subscribe('basket/add', function() {
+  console.log('Ativo ao adicionar um produto ao carrinho');
+}); 
+
+$.subscribe('/wd/acceptance/term/checkbox/checked', function() {
+  console.log('Ativo ao checar os termos de uso no produto');
+});
+
+$.subscribe('/wd/acceptance/term/checkbox/unchecked', function() {
+  console.log('Ativo ao deschecar os termos de uso no produto');
+});
+
+$.subscribe('/wd/acceptance/term/submit', function() {
+  console.log('Ativo ao dar submit nos termos de uso no produto');
+});
+
+$.subscribe('/product/asyncprice/', function() {
+  console.log('Ativo quando o preço do compre junto é atualizado');
+});
